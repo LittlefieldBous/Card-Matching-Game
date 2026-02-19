@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Match Game</title>
+    <link rel="stylesheet" href="src/styles/index.css" />
+</head>
+<body>
+
+<section>
+    <header>
+        <div class = "left-header">
+            <h1>Card Match</h1>
+                <h3 class="directions">Use the three attempts you have to try to find the three matching pairs of cards</h3>
+        </div>
+        <div class = "right-header">
+            <h2 class="score-board">Attempts left: <span id="attempts-left">0</span></h2>
+        </div>  
+    </header>
+</section>
+<section class="game-container">
+    <div class="game-board">
+        <div class="backcard" id="backcard1">
+            <img src="./src/card-flip-image.png" alt="Card 1" class="card-image">
+        </div>
+        <div class="backcard" id="backcard2">
+            <img src="./src/card-flip-image.png" alt="Card 2" class="card-image">
+        </div>
+        <div class="backcard" id="backcard3">
+            <img src="./src/card-flip-image.png" alt="Card 3" class="card-image">
+        </div>
+        <div class="backcard" id="backcard4">
+            <img src="./src/card-flip-image.png" alt="Card 4" class="card-image">
+        </div>
+        <div class="backcard" id="backcard5">
+            <img src="./src/card-flip-image.png" alt="Card 5" class="card-image">
+        </div>
+        <div class="backcard" id="backcard6">
+            <img src="./src/card-flip-image.png" alt="Card 6" class="card-image">
+        </div>
+    </div>
+    <div class="game-over">
+        <h2 id="game-over-message">Game Over</h2>
+        <button class="buttonstyle" id="restart-button">Start Over!</button>
+    </div>
+</section>
+
+<script src="dist/index.js"></script>
+</body>
+</html>
