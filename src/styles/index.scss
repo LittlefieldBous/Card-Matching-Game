@@ -4,11 +4,19 @@ $secondary-color: #238AB6;
 $font-family: 'opensans', sans-serif;
 $text-color: #fff;
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
 body {
   background-color: $primary-color;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 } 
 
 header {
@@ -94,11 +102,32 @@ p {
 }
 
 .card-image {
-  xheight:275px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: white;
+  margin: 0;
+}
+
+.game-container {
+  padding: 1.8rem;
+  flex: 1;
+}
+
+footer {
+  background-color: #0b3d2e;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+  font-size:14px;
+
 }
 
 @media (max-width: 1000px) {

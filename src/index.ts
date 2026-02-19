@@ -132,23 +132,26 @@ private handleCardClick(cardId: number): void {
 }
 
 private checkForMatch(): void {
-    this.attemptsLeft++;
-    this.scoreBoard.textContent = String(this.attemptsLeft);
+    // this.attemptsLeft++; // Had to correct - I needed to remove this line as I didn't want it to increment here. 
+    //this.scoreBoard.textContent = String(this.attemptsLeft);
 
     const[card1, card2] = this.selected.map(id => this.cards.find(c => c.id === id) as Card);
 
     if (card1.value === card2.value) {
+        // dont increment player needs to keep going..
         // Cards match
         card1.state = CardState.Matched;
         card2.state = CardState.Matched;
         this.renderCard(card1);
         this.renderCard(card2);
         this.selected = [];
-
         this.checkWinCondition();
 
     } else {
-        // Cards do not match - flip them back after a short delay
+        // Cards do not match - flip them back after a short delay this is where I need to increment
+        this.attemptsLeft++
+        this.scoreBoard.textContent = String(this.attemptsLeft);
+
         setTimeout(() => {
             card1.state = CardState.Hidden;
             card2.state = CardState.Hidden;
